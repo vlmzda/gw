@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>宅美达</title>
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+		<!--<link rel="stylesheet" href="css/rest.css" type="text/css">-->
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+
+		<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-sm-3">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					        <span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					      </button>
+							<a class="navbar-brand" href="#"><img src="images/logo.png" alt="宅美达" /></a>
+						</div>
+					</div>
+					<div class="col-md-8 col-sm-9">
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<div class="nav navbar-nav">
+							<div class="active"><a href="#">首页</a></div>
+							<div><a href="#label">联系我们</a></div>
+						</div>
+						
+					</div>
+					</div>
+				</div>
+		</nav>
+		<div class="banner">
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<img src="images/01.jpg" alt="..." class="img-responsive">
+					</div>
+					<div class="item">
+						<img src="images/02.jpg" alt="..." class="img-responsive">
+					</div>
+					<div class="item">
+						<img src="images/03.jpg" alt="..." class="img-responsive">
+					</div>
+				</div>
+			</div>
+
+			<div class="content">
+				<div class="container">
+					<div class="contact">
+						<div class="title">
+							<a name="label">
+								<span>联系我们</span>
+								<i>CONTACT US</i>
+							</a>
+
+						</div>
+						<div class="down">
+							<div class="row">
+								<div class="col-md-5 col-sm-5 col-xs-5">
+									<div class="line pull-right"></div>
+								</div>
+								<div class="col-md-2 col-sm-2 col-xs-2">
+									<p class="icon text-hide center-block">111</p>
+								</div>
+								<div class="col-md-5 col-sm-5 col-xs-5">
+									<div class="line pull-left"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="contact_s">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="contact_c">
+									<i></i>
+									<span>公司地址</span>
+									<h6 class="text-left address">
+	    						<p>重庆</p>
+	    						<p>重庆市两江新区青枫北路30凤凰C座5层</p>
+	    					</h6>
+									<h6 class="text-left address">
+	    						<p>杭州</p>
+	    						<p>杭州市西湖区小和山高教园区小和山新苑6区6号</p>
+	    					</h6>
+								</div>
+
+							</div>
+							<div class="col-md-4">
+								<div class="contact_t">
+									<i></i>
+									<span>联系方式</span>
+									<h6>
+	    						<p>023-63767640</p>
+	    					</h6>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="contact_m">
+									<i></i>
+									<span>电子邮箱</span>
+									<h6>
+	    						<p>zhaimeida@163.com</p>
+	    					</h6>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="copyright">
+				<div style="width:430px;margin:0 auto; padding:20px 0;">
+				<span style="margin-left: 75px;">渝ICP备16007040号-3 </span>
+				<span style="margin-left: 25px;">
+					<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=50019002500964 
+">
+						<img src="images/icon_2.png"/>
+						<p>渝公网安备 50019002500964号</p>
+					</a>
+				</span>
+				</div>
+		 	</div>
+
+	</body>
+	<script>
+		var W = $(window).width();
+
+		Re();
+
+		function Re() {
+			if(W <= 994) {
+				$('.address').addClass('text-center');
+				$('.address').removeClass('text-left');
+			} else {
+				$('.address').addClass('text-left');
+				$('.address').removeClass('text-center');
+			}
+			
+			if(W <= 768){
+				$('.navbar-nav .active').removeClass('active');
+				$('.navbar-nav div').width('100%');
+			}
+			else{
+				$('.navbar-nav div').eq(0).addClass('active');
+				$('.navbar-nav div').width('35%');
+				$('.navbar-nav div.active').width('65%');
+				
+			}
+		}
+
+		$(window).resize(function() {
+			W = $(window).width();
+			Re();
+		})
+
+		$('.carousel').carousel({
+			interval: 2000
+		});
+	</script>
+
+</html>
